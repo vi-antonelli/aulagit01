@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #texto-sobre-mim {
+            width: 100%;
+            height: 100px;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>VINICIUS</h1>
+
+    <form id="formulario">
+        <label for="texto-sobre-mim">GIT É COMPLICADO MAS SE EU FOCAR E REZAR ANTES DE TODA AULA ACHO QUE APRENDO</label>
+        <textarea id="texto-sobre-mim" name="texto-sobre-mim" required></textarea>
+        <br>
+        <button type="button" onclick="mostrarTexto()">Enviar</button>
+    </form>
+
+    <div id="texto-exibido"></div>
+
+    <script>
+        function mostrarTexto() {
+            var texto = document.getElementById('texto-sobre-mim').value;
+            document.getElementById('texto-exibido').innerHTML = "<h2>Texto sobre mim:</h2><p>" + texto + "</p>";
+            document.getElementById('formulario').reset(); // Limpa o formulário
+        }
+    </script>
+
+</body>
+</html>
